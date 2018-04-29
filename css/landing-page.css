@@ -154,6 +154,47 @@ header.masthead h1 {
   border-radius: 50%;
   display: inline-block;
 }
+.dot-african-small {
+    height: 10px;
+    width: 10px;
+    background-color: #534038;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-white-small {
+  height: 10px;
+  width: 10px;
+    background-color: #e6dccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-latin-small {
+  height: 10px;
+  width: 10px;
+    background-color: #f2d2ab;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-asian-small {
+  height: 10px;
+  width: 10px;
+    background-color: #d09e74;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-native-small {
+  height: 10px;
+  width: 10px;
+  background-color: #a68d79;
+  border-radius: 50%;
+  display: inline-block;
+}
+.features-icons{
+  background-color: #FFFFFF;
+}
+ul{
+  padding-left:0px;
+}
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
