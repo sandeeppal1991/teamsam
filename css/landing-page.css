@@ -119,7 +119,41 @@ header.masthead h1 {
   left: 0;
   opacity: 0.3;
 }
-
+.dot-african {
+    height: 25px;
+    width: 25px;
+    background-color: #534038;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-white {
+    height: 25px;
+    width: 25px;
+    background-color: #e6dccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-latin {
+    height: 25px;
+    width: 25px;
+    background-color: #f2d2ab;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-asian {
+    height: 25px;
+    width: 25px;
+    background-color: #d09e74;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-native {
+  height: 25px;
+  width: 25px;
+  background-color: #a68d79;
+  border-radius: 50%;
+  display: inline-block;
+}
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
