@@ -25,7 +25,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
-    <script src="js/main.js" type="text/javascript"></script>
 
   </head>
 
@@ -68,14 +67,14 @@
       <div class="container">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-              <h2>10th May, 2018</h2>
+              <h2 id="month_text"></h2>
               <div class="col-lg-6 offset-lg-3">
                 <div class="input-group">
                   <select class="custom-select" id="inputGroupSelect04">
                     <option selected>Body Cams</option>
                     <option value="1">Body Cams</option>
                     <option value="2">Fleeting</option>
-                    <option value="3">Weapon</option>
+                    <option value="3">Mental Illness</option>
                   </select>
                 </div>
               </div>
@@ -86,7 +85,7 @@
                 <div class="dropdown pt-2 pb-4">
                 <thead>
                   <tr>
-                    <th>Firstname</th>
+                    <th>Killings this month</th>
                     <tbody>
                     <tr>
                     <td >
@@ -94,8 +93,6 @@
                               <span class="dot-african"></span>
                               <span class="dot-white"></span>
                               <span class="dot-latin"></span>
-                              <span class="dot-asian"></span>
-                              <span class="dot-native"></span>
                             </div>
                     </td>
                     </tr>
@@ -141,22 +138,14 @@
                 <tbody>
                   <tr>
                     <td>
-                      <ul>
+                      <ul class="african-1">
                         <li class="dot-african-small"></li>
-                        <li class="dot-african-small"></li>
-                        <li class="dot-african-small"></li>
-                        <li class="dot-african-small"></li>
-                        <li class="dot-african-small"></li>
-                        <li class="dot-african-small"></li>
+
                       </ul>
                     </td>
-                    <td><ul>
+                    <td><ul class="african-2">
                       <li class="dot-african-small"></li>
-                      <li class="dot-african-small"></li>
-                      <li class="dot-african-small"></li>
-                      <li class="dot-african-small"></li>
-                      <li class="dot-african-small"></li>
-                      <li class="dot-african-small"></li></td>
+                      </td>
                   </tr>
                 </tbody>
                 </table>
@@ -192,22 +181,14 @@
                 <tbody>
                   <tr>
                     <td>
-                      <ul>
+                      <ul id="white-1">
                       <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
+
                       </ul>
                     </td>
-                    <td>  <ul>
+                    <td>  <ul id="white-2">
                       <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
-                      <li class="dot-white-small"></li>
+
                       </ul></td>
                   </tr>
                 </tbody>
@@ -244,21 +225,12 @@
                 <tbody>
                   <tr>
                     <td>
-                      <ul>
+                      <ul id="hispanic-1">
                         <li class="dot-latin-small"></li>
-                        <li class="dot-latin-small"></li>
-                        <li class="dot-latin-small"></li>
-                        <li class="dot-latin-small"></li>
-                        <li class="dot-latin-small"></li>
-                        <li class="dot-latin-small"></li>
+
                       </ul>
                     </td>
-                    <td><ul>
-                      <li class="dot-latin-small"></li>
-                      <li class="dot-latin-small"></li>
-                      <li class="dot-latin-small"></li>
-                      <li class="dot-latin-small"></li>
-                      <li class="dot-latin-small"></li>
+                    <td><ul id="hispanic-2">
                       <li class="dot-latin-small"></li>
                     </ul></td>
                   </tr>
@@ -402,12 +374,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap-select.min.js" type="text/javascript"></script>
-    <script src="vendor/bootstrap/js/i18n/defaults-*.min.js" type="text/javascript"></script>
-    <script>
-    $('.selectpicker').selectpicker({
-  size: 4
-});
-</script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
   </body>
 </html>
