@@ -17,7 +17,7 @@
         }]
     }];
 var display_data;
-d3.json("/js/data.json", function(data) {
+d3.json("js/data.json", function(data) {
   console.log(data);
   display_data = data;
 
