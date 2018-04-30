@@ -16,236 +16,14 @@
         fleeting:"False"
         }]
     }];
-var display_data = [{
-	'month': 0,
-	'year': 2017,
-	'African-American': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'Hispanic': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'White': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	}
-}, {
-	'month': 1,
-	'year': 2017,
-	'African-American': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'Hispanic': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'White': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	}
-}, {
-	'month': 3,
-	'year': 2017,
-	'African-American': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'Hispanic': {
-		'count': 1,
-		'cam_on': [],
-		'cam_off': [{
-			'name': 'Jose Gonzales Rendon',
-			'age': 36,
-			'city': 'Santa Paula'
-		}],
-		'mental_illness_yes': [],
-		'mental_illness_no': [{
-			'name': 'Jose Gonzales Rendon',
-			'age': 36,
-			'city': 'Santa Paula'
-		}],
-		'flee_yes': [{
-			'name': 'Jose Gonzales Rendon',
-			'age': 36,
-			'city': 'Santa Paula'
-		}],
-		'flee_no': []
-	},
-	'White': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	}
-}, {
-	'month': 0,
-	'year': 2018,
-	'African-American': {
-		'count': 1,
-		'cam_on': [{
-			'name': 'Shaleem Tindle',
-			'age': 28,
-			'city': 'Oakland'
-		}],
-		'cam_off': [],
-		'mental_illness_yes': [{
-			'name': 'Shaleem Tindle',
-			'age': 28,
-			'city': 'Oakland'
-		}],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': [{
-			'name': 'Shaleem Tindle',
-			'age': 28,
-			'city': 'Oakland'
-		}]
-	},
-	'Hispanic': {
-		'count': 1,
-		'cam_on': [],
-		'cam_off': [{
-			'name': 'Alejandro Valdez',
-			'age': 27,
-			'city': 'Santa Maria'
-		}],
-		'mental_illness_yes': [{
-			'name': 'Alejandro Valdez',
-			'age': 27,
-			'city': 'Santa Maria'
-		}],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': [{
-			'name': 'Alejandro Valdez',
-			'age': 27,
-			'city': 'Santa Maria'
-		}]
-	},
-	'White': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	}
-}, {
-	'month': 1,
-	'year': 2018,
-	'African-American': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'Hispanic': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'White': {
-		'count': 1,
-		'cam_on': [{
-			'name': 'Jason Richard Sienze',
-			'age': 35,
-			'city': 'Nice'
-		}],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [{
-			'name': 'Jason Richard Sienze',
-			'age': 35,
-			'city': 'Nice'
-		}],
-		'flee_yes': [{
-			'name': 'Jason Richard Sienze',
-			'age': 35,
-			'city': 'Nice'
-		}],
-		'flee_no': []
-	}
-}, {
-	'month': 3,
-	'year': 2018,
-	'African-American': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'Hispanic': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	},
-	'White': {
-		'count': 0,
-		'cam_on': [],
-		'cam_off': [],
-		'mental_illness_yes': [],
-		'mental_illness_no': [],
-		'flee_yes': [],
-		'flee_no': []
-	}
-}]
+var display_data;
+d3.json("data.json", function(data) {
+  console.log(data);
+  display_data = data;
+
+});
 console.log(display_data);
+//console.log(display_data);
 var display_data1 = [{
   month:"January",
   year:"2010",
@@ -278,7 +56,7 @@ var display_data1 = [{
     not_mental:[1,1,1,1,1]
   }
 }]
-var currentMonth = display_data[0]
+var currentMonth = display_data1;
 
     d3.select("#month_text").text(months[currentMonth.month]+" "+currentMonth.year);
     var dots = d3.select("#main-dots").selectAll("span").data(currentMonth.african.cam_on);
@@ -288,11 +66,11 @@ var currentMonth = display_data[0]
     dot_Enter = dots.update().append("span").attr("class","dot-latin");
 
 
-    dots = d3.select(".african-1").selectAll("li").data(aggregate_time.african.cam_on);
-    dot_Enter = dots.enter().append("li").attr("class","dot-african-small");
-
-    dots = d3.select(".african-2").selectAll("li").data(aggregate_time.african.cam_off);
-    dot_Enter = dots.enter().append("li").attr("class","dot-african-small");
+    // dots = d3.select(".african-1").selectAll("li").data(aggregate_time.african.cam_on);
+    // dot_Enter = dots.enter().append("li").attr("class","dot-african-small");
+    //
+    // dots = d3.select(".african-2").selectAll("li").data(aggregate_time.african.cam_off);
+    // dot_Enter = dots.enter().append("li").attr("class","dot-african-small");
     console.log(dots);
 
 
