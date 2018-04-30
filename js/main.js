@@ -1,27 +1,9 @@
+var display_data = data;
+var currentMonth;
+var month_counter = 0;
 (function(){
   console.log("This is the main js file");
   var months = ["January","February","March","April","June","July","August","September","October","November","December"];
-  var data = [{
-    month:"January",
-    year:"2010",
-    killings:[{
-      name:"Abc Xyz",
-      body_cam:"True",
-      race:"African",
-      fleeting:"True"
-      },{
-        name:"Abc Def",
-        body_cam:"False",
-        race:"African",
-        fleeting:"False"
-        }]
-    }];
-var display_data;
-d3.json("js/data.json", function(data) {
-  console.log(data);
-  display_data = data;
-
-});
 console.log(display_data);
 //console.log(display_data);
 var display_data1 = [{
@@ -56,17 +38,31 @@ var display_data1 = [{
     not_mental:[1,1,1,1,1]
   }
 }]
-var currentMonth = display_data1;
 
+var currentMonth = display_data[0];
+var i =0;
+var blacks = [];
+var whites = [];
+var latinos = [];
+for (i=0;i<currentMonth.Black.count;i++){
+blacks.push(1);
+}
+for (i=0;i<currentMonth.White.count;i++){
+whites.push(1);
+}
+for (i=0;i<currentMonth.Hispanic.count;i++){
+latinos.push(1);
+}
+console.log(currentMonth.Hispanic.cam_on);
     d3.select("#month_text").text(months[currentMonth.month]+" "+currentMonth.year);
-    var dots = d3.select("#main-dots").selectAll("span").data(currentMonth.african.cam_on);
-    var dot_Enter = dots.enter().append("span").attr("class","dot-african");
-    dots = d3.select("#main-dots").selectAll("span").data(currentMonth.hispanic.cam_off);
+    var dots = d3.select("#main-dots").selectAll("span").data(currentMonth.blacks);
+    var dot_Enter = dots.enter().append("span").attr("class","dot-latin");
+    //dots = d3.select("#main-dots").selectAll("span").data(currentMonth.Hispanic.cam_off);
     console.log(dots);
-    dot_Enter = dots.update().append("span").attr("class","dot-latin");
+    //dot_Enter = dots.update().append("span").attr("class","dot-latin");
 
 
-    // dots = d3.select(".african-1").selectAll("li").data(aggregate_time.african.cam_on);
+    //dots = d3.select(".african-1").selectAll("li").data(aggregate_time.african.cam_on);
     // dot_Enter = dots.enter().append("li").attr("class","dot-african-small");
     //
     // dots = d3.select(".african-2").selectAll("li").data(aggregate_time.african.cam_off);
@@ -78,4 +74,9 @@ var currentMonth = display_data1;
   .selectAll("li")
   .classed("dot-african-small");
 
+
 })();
+function next_month(event){
+month_counter += 1;
+currentMonth = display_data[month_counter];
+}
