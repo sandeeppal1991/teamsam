@@ -1,4 +1,5 @@
 var display_data = data;
+var scrollctr = 5;
 var currentMonth;
 var aggregate_data = {
   Black_cam_on : [],
@@ -76,27 +77,39 @@ function d3stuff(currentMonth){
   var blacks = [];
   var whites = [];
   var hispanics = [];
-  for (i=0;i<currentMonth.Black.count;i++){
-  blacks.push(1);
-  }
-  for (i=0;i<currentMonth.White.count;i++){
-  whites.push(1);
-  }
-  for (i=0;i<currentMonth.Hispanic.count;i++){
-  hispanics.push(1);
-  }
+  for (i=0;i<currentMonth.Black.cam_on.length;i++){ blacks.push(currentMonth.Black.cam_on[i]); }
+  for (i=0;i<currentMonth.Black.cam_off.length;i++){ blacks.push(currentMonth.Black.cam_off[i]); }
+  for (i=0;i<currentMonth.White.cam_on.length;i++){ whites.push(currentMonth.White.cam_on[i]); }
+  for (i=0;i<currentMonth.White.cam_off.length;i++){ whites.push(currentMonth.White.cam_off[i]); }
+  for (i=0;i<currentMonth.Hispanic.cam_on.length;i++){ hispanics.push(currentMonth.Hispanic.cam_on[i]); }
+  for (i=0;i<currentMonth.Hispanic.cam_off.length;i++){ hispanics.push(currentMonth.Hispanic.cam_off[i]); }
   d3.select("#month_text").text(months[currentMonth.month]+" "+currentMonth.year);
   var black = d3.select("#main-dot-af").selectAll("span").data(blacks);
   black.exit().remove();
-  black.enter().append("span").attr("class","dot-african");
+  black.enter()
+  .append("span")
+  .attr("class","dot-african")
+  .attr("data-toggle","tooltip")
+  .attr("data-html","true")
+  .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
   var white = d3.select("#main-dot-wh").selectAll("span").data(whites);
   white.exit().remove();
-  white.enter().append("span").attr("class","dot-white");
+  white.enter()
+  .append("span")
+  .attr("class","dot-white")
+  .attr("data-toggle","tooltip")
+  .attr("data-html","true")
+  .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
   console.log("hispanics this month");
   console.log(hispanics.length);
   var hispanic = d3.select("#main-dot-la").selectAll("span").data(hispanics);
   hispanic.exit().remove();
-  hispanic.enter().append("span").attr("class","dot-latin");
+  hispanic.enter()
+  .append("span")
+  .attr("class","dot-latin")
+  .attr("data-toggle","tooltip")
+  .attr("data-html","true")
+  .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
   console.log("Doing D3 stuff now");
   console.log(aggregate_data);
 
@@ -117,6 +130,7 @@ function d3stuff(currentMonth){
       // dot_Enter = dots;
 }
 function next_month(event){
+
 month_counter += 1;
 console.log("Next Month"+ month_counter);
 currentMonth = display_data[month_counter];
@@ -126,10 +140,13 @@ d3stuff(currentMonth);
 $('[data-toggle="tooltip"]').tooltip();
 }
 $(window).scroll(function (event) {
+
     var scroll = $(window).scrollTop();
     var d3scroll = $('#d3scroll').offset().top;
-    if(scroll >= d3scroll)
+    if(scroll >= d3scroll+100)
     {
+      scrollctr = scrollctr-1;
+      if(scrollctr === 0){
       month_counter += 1;
       console.log("Next Month"+ month_counter);
       currentMonth = display_data[month_counter];
@@ -137,6 +154,8 @@ $(window).scroll(function (event) {
       console.log(aggregate_data);
       d3stuff(currentMonth);
       $('[data-toggle="tooltip"]').tooltip();
+      scrollctr=5;
+      }
     }
     // Do something
 });
