@@ -84,34 +84,39 @@ function d3stuff(currentMonth){
   for (i=0;i<currentMonth.Hispanic.cam_on.length;i++){ hispanics.push(currentMonth.Hispanic.cam_on[i]); }
   for (i=0;i<currentMonth.Hispanic.cam_off.length;i++){ hispanics.push(currentMonth.Hispanic.cam_off[i]); }
   d3.select("#month_text").text(months[currentMonth.month]+" "+currentMonth.year);
-  var black = d3.select("#main-dot-af").selectAll("span").data(blacks);
+  d3.select("#month_text2").text(months[currentMonth.month]+" "+currentMonth.year);
+  var black = d3.select("#main-dot-af").selectAll("li").data(blacks);
   black.exit().remove();
   black.enter()
-  .append("span")
+  .append("li")
   .attr("class","dot-african")
   .attr("data-toggle","tooltip")
   .attr("data-html","true")
-  .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
-  var white = d3.select("#main-dot-wh").selectAll("span").data(whites);
+  .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")})
+  .exit().remove();
+  black.exit().remove();
+  var white = d3.select("#main-dot-wh").selectAll("li").data(whites);
   white.exit().remove();
   white.enter()
-  .append("span")
+  .append("li")
   .attr("class","dot-white")
   .attr("data-toggle","tooltip")
   .attr("data-html","true")
   .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
   console.log("hispanics this month");
   console.log(hispanics.length);
-  var hispanic = d3.select("#main-dot-la").selectAll("span").data(hispanics);
+  white.exit().remove();
+  var hispanic = d3.select("#main-dot-la").selectAll("li").data(hispanics);
   hispanic.exit().remove();
   hispanic.enter()
-  .append("span")
+  .append("li")
   .attr("class","dot-latin")
   .attr("data-toggle","tooltip")
   .attr("data-html","true")
   .attr("title", function(d){return ("Name: <b>"+d.name+"</b> City: <b>"+d.city + "</b> Age: <b>"+ d.age+"</b>")});
   console.log("Doing D3 stuff now");
   console.log(aggregate_data);
+  hispanic.exit().remove();
 
   for(var k =0;k<facets.length;k++)
   {
